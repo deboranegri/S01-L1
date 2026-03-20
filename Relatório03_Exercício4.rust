@@ -1,0 +1,36 @@
+use std::io;
+
+fn calcular_media(nota1: f64, nota2: f64, nota3: f64) -> f64 {
+    let npt = (nota1 + nota2) / 2.0;
+
+    (npt * 0.7) + (nota3 * 0.3)
+}
+
+fn main() {
+    let mut n1 = String::new();
+    let mut n2 = String::new();
+    let mut n3 = String::new();
+
+    println!("Digite a nota 1:");
+    io::stdin().read_line(&mut n1).unwrap();
+
+    println!("Digite a nota 2:");
+    io::stdin().read_line(&mut n2).unwrap();
+
+    println!("Digite a nota 3:");
+    io::stdin().read_line(&mut n3).unwrap();
+
+    let n1: f64 = n1.trim().parse().unwrap();
+    let n2: f64 = n2.trim().parse().unwrap();
+    let n3: f64 = n3.trim().parse().unwrap();
+
+    let media = calcular_media(n1, n2, n3);
+
+    println!("Média final: {:.2}", media);
+
+    if media >= 60.0 {
+        println!("Aprovado!");
+    } else {
+        println!("Reprovado.");
+    }
+}
