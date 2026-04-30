@@ -29,7 +29,7 @@ class LabRegistro
   end
 
   def listar_experimentos
-    puts "\n Experimentos registrados:"
+    puts "Experimentos registrados:"
     @registros.each do |r|
       puts "  Projeto: #{r.nome_projeto} | Autor: #{r.autor}"
     end
