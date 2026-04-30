@@ -51,5 +51,5 @@ maestro.adicionar_musico(Pianista.new("Tsubaki Sawabe", "Piano"))
 
 maestro.iniciar_concerto("Clair de Lune")
 
-puts "\n Ajuste de postura:"
+puts "Ajuste de postura:"
 maestro.ajustar_postura("Allegro").each { |frase| puts frase }
