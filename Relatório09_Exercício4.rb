@@ -6,7 +6,7 @@ end
 
 module Perigoso
   def exibir_ameaca
-    puts "⚠️  ALERTA: #{@nome} representa uma ameaça!"
+    puts "ALERTA: #{@nome} representa uma ameaça!"
   end
 end
 
@@ -66,7 +66,7 @@ cena.adicionar_pessoa(Suspeito.new("Irene Adler", "Jardim"))
 
 cena.listar_todos
 
-puts "\n🔍 Suspeitos perigosos identificados:"
+puts "Suspeitos perigosos identificados:"
 cena.identificar_perigosos.each do |s|
   s.local_atual
   s.exibir_ameaca
