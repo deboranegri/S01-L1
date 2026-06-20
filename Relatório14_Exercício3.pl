@@ -1,2 +1,6 @@
-fluxo_energia(A, D) :- alimenta(A, D).
-fluxo_energia(A, D) :- alimenta(A, Z), fluxo_energia(Z, D).
+competidores_diretos(A, B) :-
+    alimenta(sol, A),
+    alimenta(terra, A),
+    alimenta(sol, B),
+    alimenta(terra, B),
+    A \= B.
